@@ -1,0 +1,9 @@
+name: MyFirstPlugin
+main: me.mrapik.myfirstplugin.MyFirstPlugin
+version: 1.0
+
+description: My first Minecraft server plugin
+
+commands:
+  fly:
+    description: Enables/Disables fly mode for player
