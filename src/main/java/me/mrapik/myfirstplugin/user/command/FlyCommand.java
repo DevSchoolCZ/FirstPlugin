@@ -1,4 +1,4 @@
-package me.mrapik.myfirstplugin;
+package me.mrapik.myfirstplugin.user.command;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -36,14 +36,6 @@ public class FlyCommand implements CommandExecutor {
             senderPlayer.sendMessage("§cTento hráč neexistuje, nebo není online!");
             return true;
         }
-
-
-        Location location = new Location(Bukkit.getWorld("world"), 100.0, 100.0, 100.0, targetPlayer.getLocation().getYaw(), targetPlayer.getLocation().getPitch());
-
-        Location playerLocation = targetPlayer.getLocation().clone();
-        playerLocation.setX(playerLocation.getX() + 100.0);
-
-        targetPlayer.teleport(playerLocation);
 
 
         if (targetPlayer.getAllowFlight()) {

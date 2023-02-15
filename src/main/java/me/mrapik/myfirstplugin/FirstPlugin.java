@@ -1,13 +1,17 @@
 package me.mrapik.myfirstplugin;
 
+import me.mrapik.myfirstplugin.user.command.FlyCommand;
+import me.mrapik.myfirstplugin.item.command.ItemCommand;
+import me.mrapik.myfirstplugin.user.listener.JoinListener;
+import me.mrapik.myfirstplugin.user.UserManager;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.io.File;
 
 public class FirstPlugin extends JavaPlugin {
 
     private static FirstPlugin instance;
+
+    private UserManager userManager;
 
     @Override
     public void onEnable() {
@@ -15,14 +19,17 @@ public class FirstPlugin extends JavaPlugin {
 
         System.out.println("Turning on");
 
+        // 0. Config & Databáze + setup prostředí
+        loadConfig();
+
         // 1. Internal
+        userManager = new UserManager();
+
         // 2. Listenery
+
         // 3. Commandy
-
-        this.getServer().getPluginManager().registerEvents(new JoinListener(), this);
-
-        this.getCommand("fly").setExecutor(new FlyCommand());
         this.getCommand("item").setExecutor(new ItemCommand());
+
     }
 
     public void loadConfig() {
@@ -79,5 +86,9 @@ public class FirstPlugin extends JavaPlugin {
 
     public static FirstPlugin getInstance() {
         return instance;
+    }
+
+    public UserManager getUserManager() {
+        return userManager;
     }
 }

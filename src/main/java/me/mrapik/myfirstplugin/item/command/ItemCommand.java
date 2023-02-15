@@ -1,5 +1,6 @@
-package me.mrapik.myfirstplugin;
+package me.mrapik.myfirstplugin.item.command;
 
+import me.mrapik.myfirstplugin.FirstPlugin;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.attribute.Attribute;
