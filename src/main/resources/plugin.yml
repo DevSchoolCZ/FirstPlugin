@@ -7,3 +7,5 @@ description: My first Minecraft server plugin
 commands:
   fly:
     description: Enables/Disables fly mode for player
+  item:
+    description: Gives custom item

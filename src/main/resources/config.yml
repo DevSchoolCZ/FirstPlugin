@@ -1,0 +1,29 @@
+test: "Testovaci zprava"
+test2: 14.0
+test3: 18
+
+users:
+  apik007:
+    money: 50000.0
+    credits: 150
+
+vipGroups:
+  premium:
+    test2: "ahoj"
+    subSubSection:
+      test: 10
+      test2: "dfd"
+      test3: "dfd"
+      g4sg4f: "Test"
+  legendary:
+    test2: "ahoj"
+    subSubSection:
+      test: 10
+      test2: "dfd"
+      test3: "dfd"
+  snowman:
+    test2: "ahoj"
+    subSubSection:
+      test: 10
+      test2: "dfd"
+      test3: "dfd"
